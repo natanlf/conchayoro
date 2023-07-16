@@ -2,8 +2,10 @@ name: steps
 on:
   push
 jobs:
-  jobx:
+  marketplace:
     runs-on: ubuntu-latest
     steps:
+      - name: Configuração do node
+        uses: actions/setup-node@v3
       - name: verification of node version
         run: node --version
